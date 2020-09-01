@@ -1,0 +1,97 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AccountLayout</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aliman</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="/Home/Index/">
+                <i class="material-icons">home</i><span class="icon-text">Главная</span>
+            </a>
+        </li>
+        </ul>
+        <div class="container">
+            <main role="main" class="pb-3">
+
+                <br>
+                <br>
+                <br>
+                <div>
+                    <img src="~/images/defaut_profile.jpg" width="100" class="rounded mx-auto d-block" alt="...">
+                </div>
+
+
+                <div class="row justify-content-center">
+                    <div class="col-8 text-center">
+                        <div class="shadow-sm p-2 m-1 bg-white rounded ">+996 772 18 19 20</div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-8 text-center">
+                        <div class="shadow-sm p-2 m-1 bg-white rounded font-weight-bold hoverable">Айбек Бакаев</div>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-1">
+                    <div class="col-8 text-center">
+                        <a href="/Home/AccountEdit/" class="btn btn-sm btn-success">Редактировать</a>
+                    </div>
+                </div>
+                <br>
+
+                <div class="d-flex justify-content-around">
+                    <div class="">
+                        <a href="/Home/AccountChat/" class="btn btn-outline-warning">
+                            <span class="material-icons">email</span>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="/Home/AccountContact/" class="btn btn btn-outline-info active">
+                            <span class="material-icons">contacts</span>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="/Home/AccountAdd/" class="btn btn-outline-dark">
+                            <span class="material-icons">add_circle_outline</span>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="/Home/AccountCalls/" class="btn btn-outline-success">
+                            <span class="material-icons">call</span>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="/Home/AccountPhotos/" class="btn btn-outline-secondary">
+                            <span class="material-icons">photo_camera</span>
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    @RenderBody()
+                </div>
+            </main>
+
+        </div>
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2020 - Aliman - <a href="Privacy">Конфеденциальность</a>
+            </div>
+        </footer>
+</body>
+</html>
