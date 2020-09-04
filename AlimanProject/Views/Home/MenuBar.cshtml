@@ -3,29 +3,35 @@
     ViewData["Title"] = "MenuBar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="navbar" style="background-color: #555;">
-    <div class="container">
-        <div class="d-flex justify-content-around" style="margin-left:35px;">
-            <div class="" style="margin-right:30px;">
-                <a href="#" class="btn btn btn-outline-info">
-                    <span class="material-icons">shopping_cart</span>
-                </a>
-            </div>
-            <div class="" style="margin-right: 30px;">
-                <a href="#" class="btn btn btn-outline-info ">
-                    <span class="material-icons">movie</span>
-                </a>
-            </div>
+<style>
+    div.scrollmenu {
+        background-color: white;
+        overflow: auto;
+        white-space: nowrap;
+    }
 
-            <div class="" style="margin-right: 30px;">
-                <a href="#" class="btn btn btn-outline-info"><span class="material-icons">tv</span></a>
-            </div>
-            <div class="" style="margin-right: 30px;">
-                <a href="#" class="btn btn btn-outline-info"><span class="material-icons">record_voice_over</span></a>
-            </div>
-        </div>
-    </div>
+        div.scrollmenu a {
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+
+            div.scrollmenu a:hover {
+                background-color: #777;
+            }
+</style>
+
+
+<div class="scrollmenu">
+    <a href="account_chats.html" class="btn btn-default  border border-dark"><span class="material-icons">movie <i style="vertical-align: 5px; font-size: 0.8em;">Магазин</i></span></a>
+    <a href="account_chats.html" class="btn btn-default  border border-dark"><span class="material-icons">email <i style="vertical-align: 5px; font-size: 0.8em;">Фильм</i></span></a>
+    <a href="account_chats.html" class="btn btn-default  border border-dark"><span class="material-icons">email <i style="vertical-align: 5px; font-size: 0.8em;">Канал</i></span></a>
+    <a href="account_chats.html" class="btn btn-default  border border-dark"><span class="material-icons">email <i style="vertical-align: 5px; font-size: 0.8em;">Реклама</i></span></a>
 </div>
+
+
 
 <div class="card">
     <img src="/images/Cat.jpg" class="card-img-top" alt="...">
@@ -41,5 +47,7 @@
     </div>
 </div>
 <br />
-<br/>
-<br/>
+<br />
+<br />
+<style>
+</style>
