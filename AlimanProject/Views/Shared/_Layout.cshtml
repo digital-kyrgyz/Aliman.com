@@ -33,6 +33,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+ 
     <h3 class="text-center text-primary p-2">Aliman</h3>
     <div class="">
         <div class="container">
@@ -91,13 +92,16 @@
 
     @if (isPayPage)
     {
-
-        <div class="container" style="overflow: auto; white-space: nowrap">
-            <a href="/Home/Store" class="@payPages.Store.Button.GetValue()"><span class="material-icons btn-sm">shopping_cart</span><span class="icon-text">Магазин</span></a>
-            <a href="/Home/Movie" class="@payPages.Movie.Button.GetValue()"><span class="material-icons btn-sm">movie</span><span class="icon-text">Фильм</span></a>
-            <a href="/Home/Tv" class="@payPages.Tv.Button.GetValue()"><span class="material-icons btn-sm">tv</span><span class="icon-text">Канал</span></a>
-            <a href="/Home/Ads" class="@payPages.Ads.Button.GetValue()"><span class="material-icons btn-sm">record_voice_over</span><span class="icon-text">Реклама</span></a>
+        <div class="container" style="overflow: auto; white-space: nowrap;margin-left:18px;">
+            <div class="scrollmenu">
+                <a href="/Home/Store" class="@payPages.Store.Button.GetValue()"><span class="material-icons btn-sm">shopping_cart Магазин</span></a>
+                <a href="/Home/Movie" class="@payPages.Movie.Button.GetValue()"><span class="material-icons btn-sm">movie Фильм</span></a>
+                <a href="/Home/Tv" class="@payPages.Tv.Button.GetValue()"><span class="material-icons btn-sm">tv Канал</span></a>
+                <a href="/Home/Ads" class="@payPages.Ads.Button.GetValue()"><span class="material-icons btn-sm">record_voice_over Реклама</span></a>
+                
+            </div>
         </div>
+
     }
 
     <div class="container">
