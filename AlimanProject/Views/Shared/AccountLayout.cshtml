@@ -1,4 +1,5 @@
-﻿
+﻿@model AlimanProject.ExtraClasses.AccountPages
+
 @{
     Layout = null;
 }
@@ -16,23 +17,23 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link href="css/site.css" rel="stylesheet" />
     <link href="~/css/account.css" rel="stylesheet" />
     <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body>
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-      
-
-                <div class="" style="margin-left: 15px;">
-                    <a href="/Home/Index/" class=" btn btn-default" style="margin-top:10px;border-color: black;">
-                        <span class="material-icons md-dark">keyboard_backspace</span>
-                    </a>
-                </div>
-          
-        </li>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            <div class="d-flex justify-content-between">
+                <a href="/Home/Index/" class="btn">
+                    <span class="material-icons md-dark">keyboard_backspace</span>
+                </a>
+                <a href="/Home/Index/" class="btn">
+                    <span class="material-icons md-dark">menu</span>
+                </a>
+            </div>
+            </li>
         </ul>
+
         <div class="container">
             <main role="main" class="pb-3">
 
@@ -40,55 +41,55 @@
                 <br>
                 <br>
                 <div>
-                    <img src="~/images/defaut_profile.jpg" width="100" class="rounded mx-auto d-block border border-dark" alt="...">
+                    <img src="~/images/defaut_profile.jpg" width="100" class="rounded mx-auto d-block border border-secondary" alt="...">
                 </div>
-
 
                 <div class="row justify-content-center">
                     <div class="col-8 text-center">
-                        <div class="shadow-sm p-2 m-1 bg-white rounded border border-dark"  >+996 772 18 19 20</div>
+                        <div class="shadow-sm p-2 m-1 bg-white rounded border border-secondary">+996 772 18 19 20</div>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-8 text-center">
-                        <div class="shadow-sm p-2 m-1 bg-white rounded font-weight-bold hoverable border border-dark">Айбек Бакаев</div>
+                        <div class="shadow-sm p-2 m-1 bg-white rounded font-weight-bold hoverable border border-secondary">Айбек Бакаев</div>
                     </div>
                 </div>
                 <div class="row justify-content-center mt-1">
                     <div class="col-8 text-center">
-                        <a href="/Home/AccountEdit/" class="btn btn-sm btn-default border border-dark">Редактировать</a>
+                        <a href="/Home/AccountEdit/" class="@Model.Edit.Button.GetValue()">Редактировать</a>
                     </div>
                 </div>
                 <br>
-
                 <div class="d-flex justify-content-around">
                     <div class="">
-                        <a href="/Home/AccountChat/" class="btn btn-default border border-dark">
+                        <a href="/Home/AccountChat/" class="@Model.Chat.Button.GetValue()">
                             <span class="material-icons">email</span>
                         </a>
                     </div>
                     <div class="">
-                        <a href="/Home/AccountContact/" class="btn btn-default border border-dark">
+                        <a href="/Home/AccountContact/" class="@Model.Contact.Button.GetValue()">
                             <span class="material-icons">contacts</span>
                         </a>
                     </div>
                     <div class="">
-                        <a href="/Home/AccountAdd/" class="btn btn-outline-dark">
+                        <a href="/Home/AccountAdd/" class="@Model.Add.Button.GetValue()">
                             <span class="material-icons">add_circle_outline</span>
                         </a>
                     </div>
                     <div class="">
-                        <a href="/Home/AccountCalls/" class="btn btn-default border border-dark">
+                        <a href="/Home/AccountCalls/" class="@Model.Call.Button.GetValue()">
                             <span class="material-icons">call</span>
                         </a>
                     </div>
                     <div class="">
-                        <a href="/Home/AccountPhotos/" class="btn btn-outline-secondary">
+                        <a href="/Home/AccountPhotos/" class="@Model.Photo.Button.GetValue()">
                             <span class="material-icons">photo_camera</span>
                         </a>
                     </div>
                 </div>
                 <hr>
+
+
                 <div>
                     @RenderBody()
                 </div>

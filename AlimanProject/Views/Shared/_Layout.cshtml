@@ -1,45 +1,70 @@
-﻿<!DOCTYPE html>
+﻿@model AlimanProject.ExtraClasses.HomePages
+@{
+    Layout = null;
+
+    bool isHomePage = false;
+    if (Model != null)
+    {
+        isHomePage = Model.IsCurrentPage;
+    }
+
+    bool isPayPage = false;
+    AlimanProject.ExtraClasses.PayPages payPages = null;
+
+    if (ViewBag.PayPages != null)
+    {
+        payPages = ViewBag.PayPages;
+        isPayPage = true;
+    }
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - AlimanProject</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h3 style="text-align:center;">Aliman.com</h3>
+    <h3 class="text-center text-primary p-2">Aliman</h3>
     <div class="">
         <div class="container">
             <div class="d-flex justify-content-around">
-                <div class="" style="margin-right:15px;">
-                    <a href="/Home/MenuBar/" class="btn btn-default  border border-dark">
-                        <span class="material-icons md-dark">subject</span>
-                    </a>
+
+                @if (isHomePage)
+                {
+                    <div class="">
+                        <a href="/Home/Pay/" class="btn btn-default mr-2">
+                            <span class="material-icons md-dark">keyboard_backspace</span>
+                        </a>
+                    </div>
+                }
+                else
+                {
+                    <div class="">
+                        <a href="/Home/Index/" class="btn btn-default">
+                            <span class="material-icons md-dark">subject</span>
+                        </a>
+                    </div>
+                }
+
+                <div class="input-group">
+                    <input type="text" class="form-control icon-text" placeholder="Поиск" aria-label="">
+                    <span class="material-icons btn btn-md">search</span>
                 </div>
 
-                <a href="#">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username">
-                        <div class="input-group-append">
-                            <span class="input-group-text"><i class="fas fa-search"></i></span>
-                        </div>
-                    </div>
-                </a>
-
-                <div class="" style="margin-left: 15px;">
-                    <a href="#" class="btn btn-default border border-dark">
+                <div class="d-flex ml-1">
+                    <a href="#" class="btn btn-md">
                         <span class="material-icons">translate</span>
                     </a>
-                </div>
-
-                <div class="" style="margin-left: 15px;">
-                    <a href="/Home/AccountChat/" class="btn btn-default border border-dark">
+                    <a href="/Home/AccountChat/" class="btn">
                         <span class="material-icons">account_circle</span>
                     </a>
                 </div>
@@ -49,14 +74,78 @@
     </div>
     <hr />
 
+    @if (isHomePage)
+    {
+        <div class="">
+            <div class="container">
+                <div class="row p-1">
+                    <a href="/Home/Album" class="@Model.Album.Button.GetValue() ">Альбом</a>
+                    <a href="/Home/Concert" class="@Model.Concert.Button.GetValue()">Концерт</a>
+                    <a href="/Home/Clip" class="@Model.Clip.Button.GetValue()">Клип</a>
+                    <a href="/Home/Chanel" class="@Model.Chanel.Button.GetValue()">Канал</a>
+                </div>
+            </div>
+        </div>
+        <br />
+    }
+
+    @if (isPayPage)
+    {
+
+        <div class="container" style="overflow: auto; white-space: nowrap">
+            <a href="/Home/Store" class="@payPages.Store.Button.GetValue()"><span class="material-icons btn-sm">shopping_cart</span><span class="icon-text">Магазин</span></a>
+            <a href="/Home/Movie" class="@payPages.Movie.Button.GetValue()"><span class="material-icons btn-sm">movie</span><span class="icon-text">Фильм</span></a>
+            <a href="/Home/Tv" class="@payPages.Tv.Button.GetValue()"><span class="material-icons btn-sm">tv</span><span class="icon-text">Канал</span></a>
+            <a href="/Home/Ads" class="@payPages.Ads.Button.GetValue()"><span class="material-icons btn-sm">record_voice_over</span><span class="icon-text">Реклама</span></a>
+        </div>
+    }
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+
+
+        @if (isHomePage)
+        {
+            <br />
+            <div class="" style="background-color: white;">
+                <div class="container">
+                    <div class="d-flex justify-content-around">
+                        <div class="" style="margin-right:1px;">
+                            <span href="account_chats.html" class="btn btn-default  border border-dark" id="a" onclick="changeColor('a');">
+                                <span class="material-icons">audiotrack</span>
+                            </span>
+                        </div>
+                        <div class="" style="margin-left: 15px;">
+                            <span href="account_contacts.html" class="btn btn-default border border-dark" id="b" onclick="changeColor('b');">
+                                <span class="material-icons">subscriptions</span>
+                            </span>
+                        </div>
+
+                        <div class="" style="margin-left: 15px;">
+                            <span href="#" class="btn btn-default  border border-dark " id="c" onclick="changeColor('c');"><span class="material-icons">live_tv</span></span>
+                        </div>
+                        <div class="" style="margin-left: 15px;">
+                            <span href="#" class="btn btn-default  border border-dark" id="d" onclick="changeColor('d');"><span class="material-icons">language</span></span>
+                        </div>
+                        <div class="" style="margin-left: 15px;">
+                            <span href="#" class="btn btn-default  border border-dark" id="e" onclick="changeColor('e');"><span class="material-icons">directions_run</span></span>
+                        </div>
+                        <div class="" style="margin-left: 15px;">
+                            <span href="#" class="btn btn-default  border border-dark" id="f" onclick="changeColor('f');"><span class="material-icons">sports_esports</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br /><br />
+            <br />
+        }
     </div>
 
+
     <footer class="border-top footer text-muted">
-        <div class="container" ">
+        <div class="container">
             &copy; 2020 - Aliman - <a href="Privacy">Конфеденциальность</a>
         </div>
     </footer>
@@ -65,7 +154,17 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-
+    <script>
+        function changeColor(id) {
+            document.getElementById('a').className = "btn btn-default border border-dark";
+            document.getElementById('b').className = "btn btn-default border border-dark";
+            document.getElementById('c').className = "btn btn-default border border-dark";
+            document.getElementById('d').className = "btn btn-default border border-dark";
+            document.getElementById('e').className = "btn btn-default border border-dark";
+            document.getElementById('f').className = "btn btn-default border border-dark";
+            document.getElementById(id).className = "btn btn-default border border-primary text-primary";
+        }
+    </script>
 
 </body>
 </html>
