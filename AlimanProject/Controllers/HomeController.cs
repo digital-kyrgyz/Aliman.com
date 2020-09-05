@@ -6,15 +6,27 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using AlimanProject.Models;
+using AlimanProject.ExtraClasses;
 
 namespace AlimanProject.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        AccountPages accountPages;
+        
 
         public HomeController(ILogger<HomeController> logger)
         {
+            accountPages = new AccountPages();
+
+            accountPages.Add.Button = new ClickedButton { Active = "btn border border-primary text-primary", NotActive = "btn border border-dark" };
+            accountPages.Call.Button = new ClickedButton { Active = "btn border border-primary text-primary", NotActive = "btn border border-dark" };
+            accountPages.Chat.Button = new ClickedButton { Active = "btn border border-primary text-primary", NotActive = "btn border border-dark" };
+            accountPages.Contact.Button = new ClickedButton { Active = "btn border border-primary text-primary", NotActive = "btn border border-dark" };
+            accountPages.Edit.Button = new ClickedButton { Active = "btn border border-primary text-primary", NotActive = "btn border border-dark" };
+            accountPages.Photo.Button = new ClickedButton { Active = "btn border border-primary text-primary", NotActive = "btn border border-dark" };
+            
             _logger = logger;
         }
 
@@ -33,31 +45,44 @@ namespace AlimanProject.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-    
-        
+
+
         public IActionResult AccountChat()
         {
-            return View();
+            
+            accountPages.Chat.Button.Activate();
+            
+            return View(accountPages);
         }
         public IActionResult AccountContact()
         {
-            return View();
+            accountPages.Contact.Button.Activate();
+
+            return View(accountPages);
         }
         public IActionResult AccountEdit()
         {
-            return View();
+            accountPages.Edit.Button.Activate();
+
+            return View(accountPages);
         }
         public IActionResult AccountCalls()
         {
-            return View();
+            accountPages.Call.Button.Activate();
+
+            return View(accountPages);
         }
         public IActionResult AccountAdd()
         {
-            return View();
+            accountPages.Add.Button.Activate();
+
+            return View(accountPages);
         }
         public IActionResult AccountPhotos()
         {
-            return View();
+            accountPages.Photo.Button.Activate();
+
+            return View(accountPages);
         }
         public IActionResult MenuBar()
         {
