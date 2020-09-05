@@ -7,6 +7,15 @@
     {
         isHomePage = Model.IsCurrentPage;
     }
+
+    bool isPayPage = false;
+    AlimanProject.ExtraClasses.PayPages payPages = null;
+
+    if (ViewBag.PayPages != null)
+    {
+        payPages = ViewBag.PayPages;
+        isPayPage = true;
+    }
 }
 
 <!DOCTYPE html>
@@ -32,7 +41,7 @@
                 @if (isHomePage)
                 {
                     <div class="">
-                        <a href="/Home/MenuBar/" class="btn btn-default mr-2">
+                        <a href="/Home/Pay/" class="btn btn-default mr-2">
                             <span class="material-icons md-dark">keyboard_backspace</span>
                         </a>
                     </div>
@@ -40,7 +49,7 @@
                 else
                 {
                     <div class="">
-                        <a href="/Home/MenuBar/" class="btn btn-default">
+                        <a href="/Home/Index/" class="btn btn-default">
                             <span class="material-icons md-dark">subject</span>
                         </a>
                     </div>
@@ -80,14 +89,63 @@
         <br />
     }
 
+    @if (isPayPage)
+    {
+
+        <div class="container" style="overflow: auto; white-space: nowrap">
+            <a href="/Home/Store" class="@payPages.Store.Button.GetValue()"><span class="material-icons btn-sm">shopping_cart</span><span class="icon-text">Магазин</span></a>
+            <a href="/Home/Movie" class="@payPages.Movie.Button.GetValue()"><span class="material-icons btn-sm">movie</span><span class="icon-text">Фильм</span></a>
+            <a href="/Home/Tv" class="@payPages.Tv.Button.GetValue()"><span class="material-icons btn-sm">tv</span><span class="icon-text">Канал</span></a>
+            <a href="/Home/Ads" class="@payPages.Ads.Button.GetValue()"><span class="material-icons btn-sm">record_voice_over</span><span class="icon-text">Реклама</span></a>
+        </div>
+    }
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+
+
+        @if (isHomePage)
+        {
+            <br />
+            <div class="" style="background-color: white;">
+                <div class="container">
+                    <div class="d-flex justify-content-around">
+                        <div class="" style="margin-right:1px;">
+                            <span href="account_chats.html" class="btn btn-default  border border-dark" id="a" onclick="changeColor('a');">
+                                <span class="material-icons">audiotrack</span>
+                            </span>
+                        </div>
+                        <div class="" style="margin-left: 15px;">
+                            <span href="account_contacts.html" class="btn btn-default border border-dark" id="b" onclick="changeColor('b');">
+                                <span class="material-icons">subscriptions</span>
+                            </span>
+                        </div>
+
+                        <div class="" style="margin-left: 15px;">
+                            <span href="#" class="btn btn-default  border border-dark " id="c" onclick="changeColor('c');"><span class="material-icons">live_tv</span></span>
+                        </div>
+                        <div class="" style="margin-left: 15px;">
+                            <span href="#" class="btn btn-default  border border-dark" id="d" onclick="changeColor('d');"><span class="material-icons">language</span></span>
+                        </div>
+                        <div class="" style="margin-left: 15px;">
+                            <span href="#" class="btn btn-default  border border-dark" id="e" onclick="changeColor('e');"><span class="material-icons">directions_run</span></span>
+                        </div>
+                        <div class="" style="margin-left: 15px;">
+                            <span href="#" class="btn btn-default  border border-dark" id="f" onclick="changeColor('f');"><span class="material-icons">sports_esports</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br /><br />
+            <br />
+        }
     </div>
 
+
     <footer class="border-top footer text-muted">
-        <div class="container" ">
+        <div class="container">
             &copy; 2020 - Aliman - <a href="Privacy">Конфеденциальность</a>
         </div>
     </footer>
@@ -96,7 +154,17 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-
+    <script>
+        function changeColor(id) {
+            document.getElementById('a').className = "btn btn-default border border-dark";
+            document.getElementById('b').className = "btn btn-default border border-dark";
+            document.getElementById('c').className = "btn btn-default border border-dark";
+            document.getElementById('d').className = "btn btn-default border border-dark";
+            document.getElementById('e').className = "btn btn-default border border-dark";
+            document.getElementById('f').className = "btn btn-default border border-dark";
+            document.getElementById(id).className = "btn btn-default border border-primary text-primary";
+        }
+    </script>
 
 </body>
 </html>

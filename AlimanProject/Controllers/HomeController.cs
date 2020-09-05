@@ -15,6 +15,7 @@ namespace AlimanProject.Controllers
         private readonly ILogger<HomeController> _logger;
         AccountPages accountPages;
         HomePages homePages;
+        PayPages payPages;
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -33,6 +34,13 @@ namespace AlimanProject.Controllers
             homePages.Clip.Button = new ClickedButton { Active = "col-3 border border-primary text-center text-primary text-decoration-none", NotActive = "col-3 border border-dark text-center text-dark text-decoration-none" };
             homePages.Concert.Button = new ClickedButton { Active = "col-3 border border-primary text-center text-primary text-decoration-none", NotActive = "col-3 border border-dark text-center text-dark text-decoration-none" };
             homePages.Chanel.Button = new ClickedButton { Active = "col-3 border border-primary text-center text-primary text-decoration-none", NotActive = "col-3 border border-dark text-center text-dark text-decoration-none" };
+
+            payPages = new PayPages();
+
+            payPages.Store.Button = new ClickedButton { Active = "btn btn-sm border border-primary text-primary", NotActive = "btn btn-sm border border-dark" };
+            payPages.Movie.Button = new ClickedButton { Active = "btn btn-sm border border-primary text-primary", NotActive = "btn btn-sm border border-dark" };
+            payPages.Tv.Button = new ClickedButton { Active = "btn btn-sm border border-primary text-primary", NotActive = "btn btn-sm border border-dark" };
+            payPages.Ads.Button = new ClickedButton { Active = "btn btn-sm border border-primary text-primary", NotActive = "btn btn-sm border border-dark" };
 
             _logger = logger;
         }
@@ -53,6 +61,7 @@ namespace AlimanProject.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        // 
 
         public IActionResult AccountChat()
         {
@@ -91,10 +100,9 @@ namespace AlimanProject.Controllers
 
             return View(accountPages);
         }
-        public IActionResult MenuBar()
-        {
-            return View();
-        }
+
+        // 
+
 
         public IActionResult Album()
         {
@@ -126,6 +134,49 @@ namespace AlimanProject.Controllers
             homePages.Chanel.Activate();
             homePages.Chanel.Button.Activate();
             return View(homePages);
+        }
+
+        // 
+        public IActionResult Pay()
+        {
+            return RedirectToAction("Store");
+        }
+
+        public IActionResult Store()
+        {
+            payPages.Activate();
+            payPages.Store.Activate();
+            payPages.Store.Button.Activate();
+            ViewBag.PayPages = payPages;
+            return View("PayStore");
+        }
+
+        public IActionResult Movie()
+        {
+            payPages.Activate();
+            payPages.Movie.Activate();
+            payPages.Movie.Button.Activate();
+            ViewBag.PayPages = payPages;
+            return View("PayMovie");
+
+        }
+        public IActionResult Tv()
+        {
+            payPages.Activate();
+            payPages.Tv.Activate();
+            payPages.Tv.Button.Activate();
+            ViewBag.PayPages = payPages;
+            return View("PayTv");
+
+        }
+        public IActionResult Ads()
+        {
+            payPages.Activate();
+            payPages.Ads.Activate();
+            payPages.Ads.Button.Activate();
+            ViewBag.PayPages = payPages;
+            return View("PayAds");
+
         }
     }
 }

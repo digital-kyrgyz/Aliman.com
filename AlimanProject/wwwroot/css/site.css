@@ -79,28 +79,8 @@ body {
     color: #0366d6;
 }
 
-div.scrollmenu {
-    background-color: white;
-    overflow: auto;
-    white-space: nowrap;
-}
-
-    div.scrollmenu a {
-        display: inline-block;
-        color: black;
-        text-align: center;
-        padding: 14px;
-        text-decoration: none;
-    }
-
-        div.scrollmenu a:hover {
-            background-color: #777;
-        }
-
-
-
 .icon-text {
-    line-height: 24px;
+    line-height: 15px;
 }
 
 .material-icons {
