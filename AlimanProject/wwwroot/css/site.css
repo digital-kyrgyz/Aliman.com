@@ -96,3 +96,14 @@ div.scrollmenu {
         div.scrollmenu a:hover {
             background-color: #777;
         }
+
+
+
+.icon-text {
+    line-height: 24px;
+}
+
+.material-icons {
+    display: inline-flex;
+    vertical-align: top;
+}

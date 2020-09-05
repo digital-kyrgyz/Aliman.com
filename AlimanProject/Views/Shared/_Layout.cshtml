@@ -1,4 +1,15 @@
-﻿<!DOCTYPE html>
+﻿@model AlimanProject.ExtraClasses.HomePages
+@{
+    Layout = null;
+
+    bool isHomePage = false;
+    if (Model != null)
+    {
+        isHomePage = Model.IsCurrentPage;
+    }
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -13,25 +24,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h3 class="text-center">Aliman</h3>
+    <h3 class="text-center text-primary p-2">Aliman</h3>
     <div class="">
         <div class="container">
             <div class="d-flex justify-content-around">
-                <div class="">
-                    <a href="/Home/MenuBar/" class="btn btn-default">
-                        <span class="material-icons md-dark">subject</span>
-                    </a>
-                </div>
+
+                @if (isHomePage)
+                {
+                    <div class="">
+                        <a href="/Home/MenuBar/" class="btn btn-default mr-2">
+                            <span class="material-icons md-dark">keyboard_backspace</span>
+                        </a>
+                    </div>
+                }
+                else
+                {
+                    <div class="">
+                        <a href="/Home/MenuBar/" class="btn btn-default">
+                            <span class="material-icons md-dark">subject</span>
+                        </a>
+                    </div>
+                }
 
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Поиск" aria-label="">
-                    <div class="input-group-append">
-                        <span class="input-group-text"><i class="fas fa-search"></i></span>
-                    </div>
+                    <input type="text" class="form-control icon-text" placeholder="Поиск" aria-label="">
+                    <span class="material-icons btn btn-md">search</span>
                 </div>
 
                 <div class="d-flex ml-1">
-                    <a href="#" class="btn">
+                    <a href="#" class="btn btn-md">
                         <span class="material-icons">translate</span>
                     </a>
                     <a href="/Home/AccountChat/" class="btn">
@@ -43,6 +64,21 @@
         </div>
     </div>
     <hr />
+
+    @if (isHomePage)
+    {
+        <div class="">
+            <div class="container">
+                <div class="row p-1">
+                    <a href="/Home/Album" class="@Model.Album.Button.GetValue() ">Альбом</a>
+                    <a href="/Home/Concert" class="@Model.Concert.Button.GetValue()">Концерт</a>
+                    <a href="/Home/Clip" class="@Model.Clip.Button.GetValue()">Клип</a>
+                    <a href="/Home/Chanel" class="@Model.Chanel.Button.GetValue()">Канал</a>
+                </div>
+            </div>
+        </div>
+        <br />
+    }
 
     <div class="container">
         <main role="main" class="pb-3">
