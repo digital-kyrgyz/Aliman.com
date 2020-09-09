@@ -37,59 +37,10 @@
         <div class="container">
             <main role="main" class="pb-3">
 
-                <br>
-                <br>
-                <br>
-                <div>
-                    <img src="~/images/defaut_profile.jpg" width="100" class="rounded mx-auto d-block border border-secondary" alt="...">
-                </div>
 
-                <div class="row justify-content-center">
-                    <div class="col-8 text-center">
-                        <div class="shadow-sm p-2 m-1 bg-white rounded border border-secondary">+996 772 18 19 20</div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-8 text-center">
-                        <div class="shadow-sm p-2 m-1 bg-white rounded font-weight-bold hoverable border border-secondary">Айбек Бакаев</div>
-                    </div>
-                </div>
-                <div class="row justify-content-center mt-1">
-                    <div class="col-8 text-center">
-                        <a href="/Home/AccountEdit/" class="@Model.Edit.Button.GetValue()">Редактировать</a>
-                    </div>
-                </div>
                 <br>
-                <div class="d-flex justify-content-around">
-                    <div class="">
-                        <a href="/Home/AccountChat/" class="@Model.Chat.Button.GetValue()">
-                            <span class="material-icons">email</span>
-                        </a>
-                    </div>
-                    <div class="">
-                        <a href="/Home/AccountContact/" class="@Model.Contact.Button.GetValue()">
-                            <span class="material-icons">contacts</span>
-                        </a>
-                    </div>
-                    <div class="">
-                        <a href="/Home/AccountAdd/" class="@Model.Add.Button.GetValue()">
-                            <span class="material-icons">add_circle_outline</span>
-                        </a>
-                    </div>
-                    <div class="">
-                        <a href="/Home/AccountCalls/" class="@Model.Call.Button.GetValue()">
-                            <span class="material-icons">call</span>
-                        </a>
-                    </div>
-                    <div class="">
-                        <a href="/Home/AccountPhotos/" class="@Model.Photo.Button.GetValue()">
-                            <span class="material-icons">photo_camera</span>
-                        </a>
-                    </div>
-                </div>
-                <hr>
-
-
+                <br>
+                <br>
                 <div>
                     @RenderBody()
                 </div>

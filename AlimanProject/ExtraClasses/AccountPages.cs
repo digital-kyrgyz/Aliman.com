@@ -10,6 +10,7 @@ namespace AlimanProject.ExtraClasses
         public CallPage Call { get; set; } = new CallPage();
         public PhotoPage Photo { get; set; } = new PhotoPage();
         public ContactPage Contact { get; set; } = new ContactPage();
+        public GuestPage Guest { get; set; } = new GuestPage();
     }
 
     public class EditPage
@@ -40,7 +41,11 @@ namespace AlimanProject.ExtraClasses
     public class ContactPage
     {
         public ClickedButton Button { get; set; } = new ClickedButton();
+    }
 
+    public class GuestPage
+    {
+        public ClickedButton Button { get; set; } = new ClickedButton();
     }
 
     public class ClickedButton

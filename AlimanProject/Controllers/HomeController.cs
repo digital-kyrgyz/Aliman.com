@@ -101,6 +101,13 @@ namespace AlimanProject.Controllers
             return View(accountPages);
         }
 
+        public IActionResult AccountGuest()
+        {
+            accountPages.Guest.Button.Activate();
+
+            return View(accountPages);
+        }
+
         // 
 
 
