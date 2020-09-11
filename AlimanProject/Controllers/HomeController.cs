@@ -178,5 +178,9 @@ namespace AlimanProject.Controllers
             return View("PayAds");
 
         }
+        public IActionResult AlbumMusic()
+        {
+            return View();
+        }
     }
 }

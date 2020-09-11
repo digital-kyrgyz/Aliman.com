@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewData["Title"] = "AlbumMusic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+
+    <br>
+    <div class="row p-3">
+
+        <div class="col-4 shadow-sm p-0 m-0 text-center">
+            <img src="~/images/defaut_profile.jpg" style="width:100px" class="img-thumbnail p-0 m-0" />
+        </div>
+        <div class="col-8 pt-3">
+            <p class="p-1 border border-dark rounded text-center font-weight-bold rounded">Нурлан Насип</p>
+            <p class="p-1 border border-dark rounded text-center rounded"><b>1238</b> песен</p>
+        </div>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center p-1 border border-dark rounded">
+        <span class=" col-4 text-center">
+            <div class=""><b>20k</b></div>
+            <div class="">скачиваний</div>
+        </span>
+        <span class=" col-4 text-center">
+            <div class=""><b>242</b></div>
+            <div class="">минут</div>
+        </span>
+        <span class=" col-4 text-center">
+            <div class=""><b>24k</b></div>
+            <div class="">посещений</div>
+        </span>
+    </div>
+    <br>
+
+    <table width="100%" class="table">
+
+        <tr>
+            <td width="100%" scope="row" class="text-center text-dark text-decoration-none">
+                <h6 class="text-center font-weight-bold">Мирбек Атабеков - Менда бай болгом</h6>
+                <div class="row">
+                    <audio controls class="w-100">
+
+                        <source class="border" src="~/music/bilhabin.mp3 ">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td width="100%" scope="row" class="text-center text-dark text-decoration-none">
+                <h6 class="text-center font-weight-bold">Мирбек Атабеков - Караз коз</h6>   
+                <div class="row">
+                    <audio controls class="w-100">
+                        <source class="border" src="~/music/bilhabin.mp3 ">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td width="100%" scope="row" class="text-center text-dark text-decoration-none">
+                <h6 class="text-center font-weight-bold scroll-left">
+                    Мирбек Атабеков - Атамекеним
+                </h6>
+                <div class="row">
+                    <audio controls class="w-100">
+                        <source class="border" src="~/music/bilhabin.mp3 ">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <br>
+            </td>
+        </tr>
+    </table>
+
+</div>
