@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewData["Title"] = "AlbumMusic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <br>
+    <div class="row p-3">
+
+        <div class="col-4 shadow-sm p-0 m-0 text-center">
+            <img src="~/images/nurlan.jpg" style="width: 150px; height: 130px; object-fit:cover;"  class="img-thumbnail p-0 m-0" />
+        </div>
+        <div class="col-8 pt-1">
+            <p class="p-1 border border-dark rounded text-center font-weight-bold rounded">Нурлан Насип</p>
+            <p class="p-1 border border-dark rounded text-center rounded">Баштоо ырларым</p>
+            <p class="p-1 border border-dark rounded text-center rounded"><b>3</b> песен</p>
+        </div>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center p-1 border border-dark rounded">
+        <div class=" col-4 text-center">
+            <div class=""><b>10 931</b></div>
+            <div class="">скачиваний</div>
+        </div>
+        <div class=" col-4 text-center">
+            <div class=""><b>830 ч</b></div>
+            <div class="">прослушиваний</div>
+        </div>
+        <div class=" col-4 text-center">
+            <div class=""><b>12 566</b></div>
+            <div class="">посещений</div>
+        </div>
+    </div>
+    <br>
+
+    <table width="100%" class="table">
+
+        <tr>
+            <td width="100%" scope="row" class="text-center text-dark text-decoration-none">
+                <div class="d-flex justify-content-between">
+                    <h6 class="text-center font-weight-bold pt-2">Туулган кун</h6>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a href="/Home" class="btn btn-sm text-dark">
+                            <span class="material-icons">get_app</span>
+                        </a>
+                        <a href="/Home" class="btn btn-sm text-dark">
+                            <span class="material-icons">share</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="d-flex w-100">
+                    <audio controls class="w-100">
+                        <source class="border" src="~/music/Нурлан Насип - Туулган кун.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td width="100%" scope="row" class="text-center text-dark text-decoration-none">
+                <div class="d-flex justify-content-between">
+                    <h6 class="text-center font-weight-bold pt-2">Тунук махабат</h6>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a href="/Home" class="btn btn-sm text-dark">
+                            <span class="material-icons">get_app</span>
+                        </a>
+                        <a href="/Home" class="btn btn-sm text-dark">
+                            <span class="material-icons">share</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="d-flex w-100">
+                    <audio controls class="w-100">
+                        <source class="border" src="~/music/Нурлан Насип Малика Дина - Тунук махабат.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td width="100%" scope="row" class="text-center text-dark text-decoration-none">
+                <div class="d-flex justify-content-between">
+                    <h6 class="text-center font-weight-bold pt-2">Ысык-Колум</h6>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a href="/Home" class="btn btn-sm text-dark">
+                            <span class="material-icons">get_app</span>
+                        </a>
+                        <a href="/Home" class="btn btn-sm text-dark">
+                            <span class="material-icons">share</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="d-flex w-100">
+                    <audio controls class="w-100">
+                        <source class="border" src="~/music/Нурлан Насип Бегиш - Ысык-Колум.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <br>
+            </td>
+        </tr>
+    </table>
+

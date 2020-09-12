@@ -4,31 +4,31 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container">
 
     <br>
     <div class="row p-3">
 
         <div class="col-4 shadow-sm p-0 m-0 text-center">
-            <img src="~/images/artist1.jpg" style="width:100px" class="img-thumbnail p-0 m-0" />
+            <img src="~/images/artist1.jpg" style="width: 150px; height: 130px; object-fit:cover;" class="img-thumbnail p-0 m-0" />
         </div>
-        <div class="col-8 pt-3">
+        <div class="col-8 pt-1">
             <p class="p-1 border border-dark rounded text-center font-weight-bold rounded">Мирбек Атабеков</p>
-            <p class="p-1 border border-dark rounded text-center rounded"><b>1238</b> песен</p>
+            <p class="p-1 border border-dark rounded text-center rounded">Ырлар топтому</p>
+            <p class="p-1 border border-dark rounded text-center rounded"><b>4</b> песен</p>
         </div>
     </div>
     <br>
     <div class="d-flex justify-content-center p-1 border border-dark rounded">
         <div class=" col-4 text-center">
-            <div class=""><b>20k</b></div>
+            <div class=""><b>20 931</b></div>
             <div class="">скачиваний</div>
         </div>
         <div class=" col-4 text-center">
-            <div class=""><b>242</b></div>
-            <div class="">минут</div>
+            <div class=""><b>1490 ч</b></div>
+            <div class="">прослушиваний</div>
         </div>
         <div class=" col-4 text-center">
-            <div class=""><b>24k</b></div>
+            <div class=""><b>34 566</b></div>
             <div class="">посещений</div>
         </div>
     </div>
@@ -38,11 +38,20 @@
 
         <tr>
             <td width="100%" scope="row" class="text-center text-dark text-decoration-none">
-                <h6 class="text-center font-weight-bold">Мирбек Атабеков - Менда бай болгом</h6>
-                <div class="row">
+                <div class="d-flex justify-content-between">
+                    <h6 class="text-center font-weight-bold pt-2">Менда бай болгом</h6>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a href="/Home" class="btn btn-sm text-dark">
+                            <span class="material-icons">get_app</span>
+                        </a>
+                        <a href="/Home" class="btn btn-sm text-dark">
+                            <span class="material-icons">share</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="d-flex w-100">
                     <audio controls class="w-100">
-
-                        <source class="border" src="~/music/bilhabin.mp3 ">
+                        <source class="border" src="~/music/Мирбек Атабеков - Менда бай болгом.mp3">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
@@ -50,10 +59,20 @@
         </tr>
         <tr>
             <td width="100%" scope="row" class="text-center text-dark text-decoration-none">
-                <h6 class="text-center font-weight-bold">Мирбек Атабеков - Караз коз</h6>   
-                <div class="row">
+                <div class="d-flex justify-content-between">
+                    <h6 class="text-center font-weight-bold pt-2">Караз коз</h6>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a href="/Home" class="btn btn-sm text-dark">
+                            <span class="material-icons">get_app</span>
+                        </a>
+                        <a href="/Home" class="btn btn-sm text-dark">
+                            <span class="material-icons">share</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="d-flex w-100">
                     <audio controls class="w-100">
-                        <source class="border" src="~/music/bilhabin.mp3 ">
+                        <source class="border" src="~/music/mirbek_atabekov_-_kara-koz.mp3">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
@@ -61,12 +80,20 @@
         </tr>
         <tr>
             <td width="100%" scope="row" class="text-center text-dark text-decoration-none">
-                <h6 class="text-center font-weight-bold scroll-left">
-                    Мирбек Атабеков - Атамекеним
-                </h6>
-                <div class="row">
+                <div class="d-flex justify-content-between">
+                    <h6 class="text-center font-weight-bold pt-2">Тумарым</h6>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a href="/Home" class="btn btn-sm text-dark">
+                            <span class="material-icons">get_app</span>
+                        </a>
+                        <a href="/Home" class="btn btn-sm text-dark">
+                            <span class="material-icons">share</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="d-flex w-100">
                     <audio controls class="w-100">
-                        <source class="border" src="~/music/bilhabin.mp3 ">
+                        <source class="border" src="~/music/Мирбек Атабеков - Тумарым.mp3">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
@@ -75,4 +102,3 @@
         </tr>
     </table>
 
-</div>

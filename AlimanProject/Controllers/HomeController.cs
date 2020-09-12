@@ -189,5 +189,9 @@ namespace AlimanProject.Controllers
         {
             return View();
         }
+        public IActionResult AlbumMusicNurlan()
+        {
+            return View();
+        }
     }
 }
