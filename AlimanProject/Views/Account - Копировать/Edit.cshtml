@@ -1,0 +1,197 @@
+﻿
+@{
+    ViewData["Title"] = "AccountEdit";
+    Layout = "~/Views/Shared/AccountLayout.cshtml";
+}
+
+@* Аккаунт *@
+<div>
+    <img src="~/images/defaut_profile.jpg" width="100" class="rounded mx-auto d-block border border-secondary" alt="...">
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-8 text-center">
+        <div class="shadow-sm p-2 m-1 bg-white rounded border border-secondary">+996 772 18 19 20</div>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-8 text-center">
+        <div class="shadow-sm p-2 m-1 bg-white rounded font-weight-bold hoverable border border-secondary">Айбек Бакаев</div>
+    </div>
+</div>
+<div class="row justify-content-center mt-1">
+    <div class="col-8 text-center">
+        <a href="/Account/Edit/" class="btn border border-primary text-primary">Редактировать</a>
+    </div>
+</div>
+<br>
+<div class="d-flex justify-content-around">
+    <div class="">
+        <a href="/Account/Chat/" class="btn border border-dark text-dark">
+            <span class="material-icons">email</span>
+        </a>
+    </div>
+    <div class="">
+        <a href="/Account/Contact/" class="btn border border-dark text-dark">
+            <span class="material-icons">contacts</span>
+        </a>
+    </div>
+    <div class="">
+        <a href="/Account/Add/" class="btn border border-dark text-dark">
+            <span class="material-icons">add_circle_outline</span>
+        </a>
+    </div>
+    <div class="">
+        <a href="/Account/Calls/" class="btn border border-dark text-dark">
+            <span class="material-icons">call</span>
+        </a>
+    </div>
+    <div class="">
+        <a href="/Account/Photos/" class="btn border border-dark text-dark">
+            <span class="material-icons">photo_camera</span>
+        </a>
+    </div>
+</div>
+<hr>
+
+
+@* Контент *@
+
+<div>
+    <main>
+        <form>
+            <table width="100%">
+                <tr>
+                    <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
+                        <label for="person_name">Имя</label>
+                    </td>
+                    <td width="50%" class="border border-dark text-center text-dark text-decoration-none">
+                        <input type="text" id="person_name" style="border: none;" class="text-center form-control" value="Айбек">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
+                        <label for="person_surname">Фамилия</label>
+                    </td>
+                    <td width="50%" class="border border-dark text-center text-dark text-decoration-none">
+                        <input type="text" id="person_surname" style="border: none;" class="text-center form-control" value="Бакаев">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
+                        <label for="phone">Номер телефона</label>
+                    </td>
+                    <td width="50%" class="border border-dark text-center text-dark text-decoration-none">
+                        <input type="text" id="phone" style="border: none;" class="text-center form-control" value="+996 772 18 19 20">
+                    </td>
+                </tr>
+                @*<tr>
+                        <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
+                            <label for="photo">Фото</label>
+                        </td>
+                        <td width="50%" class="input-group border border-dark text-center text-dark text-decoration-none">
+                            <input type="file" accept="image/*" style="border: none;" class="text-center form-control">
+                        </td>
+                    </tr>*@
+                <tr>
+                    <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
+                        <label for="country">Страна</label>
+                    </td>
+                    <td width="50%" class="input-group border border-dark text-center text-dark text-decoration-none">
+                        <div class="input-group-prepend bg-white">
+                            <span class="input-group-text bg-white">
+                                <img style="width: 20px;" src="~/images/flag_KG.png" />
+                            </span>
+                        </div>
+                        <input type="text" id="country" style="border: none;" class="text-center form-control" value="Кыргызстан">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
+                        <label for="city">Город</label>
+                    </td>
+                    <td width="50%" class="input-group border border-dark text-center text-dark text-decoration-none">
+                        <div class="input-group-prepend bg-white">
+                            <span class="input-group-text bg-white">
+                                <img style="width: 20px;" src="~/images/logo_BISHKEK.png" />
+                            </span>
+                        </div>
+                        <input type="text" id="city" style="border: none;" class="text-center form-control" value="Бишкек">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
+                        <label for="e5">Место учебы</label>
+                    </td>
+                    <td width="50%" class="input-group border border-dark text-center text-dark text-decoration-none">
+                        <div class="input-group-prepend bg-white">
+                            <span class="input-group-text bg-white">
+                                <img style="width: 20px;" src="~/images/logo_KGTU.jpg" />
+                            </span>
+                        </div>
+                        <input type="text" id="e5" style="border: none;" class="text-center form-control" value="КГТУ им И.Раззакова">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
+                        <label for="e6">Место работы</label>
+                    </td>
+                    <td width="50%" class="border border-dark text-center text-dark text-decoration-none">
+                        <input type="text" id="e6" style="border: none;" class="text-center form-control" value="Кока-Кола Кыргызстан">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
+                        <label for="e7">Хобби</label>
+                    </td>
+                    <td width="50%" class="border border-dark text-center text-dark text-decoration-none">
+                        <input type="text" id="e7" style="border: none;" class="text-center form-control" value="Футбол">
+                    </td>
+                </tr>
+            </table>
+
+            @*ФИ
+                Страна
+                Регион
+                Место учебы
+                Место работы
+                Хобби*@
+            <br />
+            <div class="form-group d-flex justify-content-center">
+                <button class="btn btn-primary">Сохранить</button>
+            </div>
+        </form>
+
+    </main>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

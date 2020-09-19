@@ -1,0 +1,235 @@
+﻿
+@{
+    ViewData["Title"] = "AccountAdd";
+    Layout = "~/Views/Shared/AccountLayout.cshtml";
+}
+
+@* Аккаунт *@
+<div>
+    <img src="~/images/defaut_profile.jpg" width="100" class="rounded mx-auto d-block border border-secondary" alt="...">
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-8 text-center">
+        <div class="shadow-sm p-2 m-1 bg-white rounded border border-secondary">+996 552 81 23 48</div>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-8 text-center">
+        <div class="shadow-sm p-2 m-1 bg-white rounded font-weight-bold hoverable border border-secondary">Акыл</div>
+    </div>
+</div>
+@*<div class="row justify-content-center mt-1">
+    <div class="col-8 text-center">
+        <a href="/Home/AccountEdit/" class="btn text-dark">Редактировать</a>
+    </div>
+</div>*@
+<br>
+<div class="d-flex justify-content-around">
+    <div class="">
+        <a href="/Account/Photos/" class="border border-dark btn text-dark">
+            <span class="material-icons">photo_camera</span>
+        </a>
+    </div>
+    <div class="">
+        <a href="/Account/Add/" class="border border-dark btn text-dark">
+            <span class="material-icons">add_circle_outline</span>
+        </a>
+    </div>
+    <div class="">
+        <a href="/Account/Contact/" class="border border-dark btn text-dark">
+            <span class="material-icons">contacts</span>
+        </a>
+    </div>
+    <div class="">
+        <a href="/Account/Calls/" class="border border-dark btn text-dark">
+            <span class="material-icons">call</span>
+        </a>
+    </div>
+    <div class="">
+        <a href="/Account/Chat/" class="border border-dark btn text-dark">
+            <span class="material-icons">email</span>
+        </a>
+    </div>
+</div>
+<hr>
+
+
+@* Контент *@
+<div>
+    <main>
+        <form>
+            <table width="100%" class="table">
+
+                @*<tr>
+                    <td width="10%" class="text-center text-dark text-decoration-none"></td>
+                    <td width="2%"></td>
+                    <td width="40%" class="text-center text-dark text-decoration-none">
+                        <span class="text-center">
+                            Имя
+                        </span>
+                    </td>
+                    <td width="40%" class="text-center text-dark text-decoration-none">
+                        <span class="text-center">
+                            Айбек
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="10%" class="text-center text-dark text-decoration-none"></td>
+                    <td width="2%"></td>
+                    <td width="40%" scope="row" class="text-center text-dark text-decoration-none">
+                        <span class="text-center">
+                            Фамилия
+                        </span>
+                    </td>
+                    <td width="40%" class="text-center text-dark text-decoration-none">
+                        <span class="text-center">
+                            Бакаев
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="10%" class="text-center text-dark text-decoration-none"></td>
+                    <td width="2%"></td>
+                    <td width="40%" scope="row" class="text-center text-dark text-decoration-none">
+                        <span class="text-center">
+                            Номер телефона
+                        </span>
+                    </td>
+                    <td width="40%" class="text-center text-dark text-decoration-none">
+                        <span class="text-center">
+                            +996 772 18 19 20
+                        </span>
+                    </td>
+                </tr>*@
+                @*<tr>
+            <td width="50%" scope="row" class="text-center text-dark text-decoration-none">
+                <label for="photo">Фото</label>
+            </td>
+            <td width="50%" class="input-group text-center text-dark text-decoration-none">
+                <input type="file" accept="image/*" style="border: none;" class="text-center form-control">
+            </td>
+        </tr>*@
+            <tr>
+                <td width="10%" class="text-center text-dark text-decoration-none">
+                    <img style="width: 20px;" src="~/images/flag_KG.png" />
+                </td>
+                <td width="2%"></td>
+                <td width="40%" scope="row" class="text-center text-dark text-decoration-none">
+                    <span class="text-center">Страна</span>
+                </td>
+                <td width="50%" class="text-center text-dark text-decoration-none">
+                    @*<div class="input-group-prepend bg-white">
+            <span class="input-group-text bg-white">
+                <img style="width: 20px;" src="~/images/flag_KG.png" />
+            </span>
+        </div>*@
+                    <span class="text-center">Кыргызстан</span>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%" class="text-center text-dark text-decoration-none">
+                    <img style="width: 20px;" src="~/images/logo_BISHKEK.png" />
+                </td>
+                <td width="2%"></td>
+                <td width="40%" scope="row" class="text-center text-dark text-decoration-none">
+                    <span  class="text-center">Город</span>
+                </td>
+                <td width="40%" class="text-center text-dark text-decoration-none">
+                    @*<div class="input-group-prepend bg-white">
+            <span class="input-group-text bg-white">
+                <img style="width: 20px;" src="~/images/logo_BISHKEK.png" />
+            </span>
+        </div>*@
+                    <span class="text-center">Бишкек</span>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%" class="text-center text-dark text-decoration-none">
+                    <img style="width: 20px;" src="~/images/logo_KGTU.jpg" />
+                </td>
+                <td width="2%"></td>
+                <td width="40%" scope="row" class="text-center text-dark text-decoration-none">
+                    <span  class="text-center">Место учебы</span>
+                </td>
+                <td width="40%" class="text-center text-dark text-decoration-none">
+                    @*<div class="input-group-prepend bg-white">
+            <span class="input-group-text bg-white">
+                <img style="width: 20px;" src="~/images/logo_KGTU.jpg" />
+            </span>
+        </div>*@
+                    <span class="text-center">КГТУ им И.Раззакова</span>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%" class="text-center text-dark text-decoration-none"></td>
+                <td width="2%"></td>
+                <td width="40%" scope="row" class="text-center text-dark text-decoration-none">
+                    <span  class="text-center">Место работы</span>
+                </td>
+                <td width="40%" class="text-center text-dark text-decoration-none">
+                    <span class="text-center">Кока-Кола Кыргызстан</span>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%" class="text-center text-dark text-decoration-none"></td>
+                <td width="2%"></td>
+                <td width="40%" scope="row" class="text-center text-dark text-decoration-none">
+                    <span class="text-center">Хобби</span>
+                </td>
+                <td width="40%" class="text-center text-dark text-decoration-none">
+                    <span class="text-center">Футбол</span>
+                </td>
+            </tr>
+            </table>
+
+            @*
+                ФИ
+                Страна
+                Регион
+                Место учебы
+                Место работы
+                Хобби
+            *@
+            <br />
+            <div class="form-group d-flex justify-content-center">
+                <button class="btn btn-primary">Сохранить</button>
+            </div>
+        </form>
+
+    </main>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
