@@ -25,35 +25,38 @@
         <a href="/Account/Edit/" class="btn border border-dark text-dark">Редактировать</a>
     </div>
 </div>
-<br>
-<div class="d-flex justify-content-around">
-    <div class="">
-        <a href="/Account/Chat/" class="btn border border-dark text-dark">
-            <span class="material-icons">email</span>
-        </a>
+<div class="sticky-top bg-white">
+    <br>
+    <div class="d-flex justify-content-around">
+        <div class="">
+            <a href="/Account/Chat/" class="btn border border-dark text-dark">
+                <span class="material-icons">email</span>
+            </a>
+        </div>
+        <div class="">
+            <a href="/Account/Contact/" class="btn border border-primary text-primary">
+                <span class="material-icons">contacts</span>
+            </a>
+        </div>
+        <div class="">
+            <a href="/Account/Add/" class="btn border border-dark text-dark">
+                <span class="material-icons">add_circle_outline</span>
+            </a>
+        </div>
+        <div class="">
+            <a href="/Account/Calls/" class="btn border border-dark text-dark">
+                <span class="material-icons">call</span>
+            </a>
+        </div>
+        <div class="">
+            <a href="/Account/Photos/" class="btn border border-dark text-dark">
+                <span class="material-icons">photo_camera</span>
+            </a>
+        </div>
     </div>
-    <div class="">
-        <a href="/Account/Contact/" class="btn border border-primary text-primary">
-            <span class="material-icons">contacts</span>
-        </a>
-    </div>
-    <div class="">
-        <a href="/Account/Add/" class="btn border border-dark text-dark">
-            <span class="material-icons">add_circle_outline</span>
-        </a>
-    </div>
-    <div class="">
-        <a href="/Account/Calls/" class="btn border border-dark text-dark">
-            <span class="material-icons">call</span>
-        </a>
-    </div>
-    <div class="">
-        <a href="/Account/Photos/" class="btn border border-dark text-dark">
-            <span class="material-icons">photo_camera</span>
-        </a>
-    </div>
+    <hr>
 </div>
-<hr>
+
 
 
 @* Контент *@
@@ -63,7 +66,7 @@
     </div>
 </div>
 
-<a asp-action="AccountGuest" asp-controller="Home" class="text-decoration-none text-dark">
+<a asp-action="Guest" asp-controller="Account" class="text-decoration-none text-dark">
     <div class="row shadow-sm p-1 mb-1 bg-white rounded">
         <div class="col-3">
             <img src="~/images/defaut_profile.jpg" class="img-thumbnail rounded" alt="...">

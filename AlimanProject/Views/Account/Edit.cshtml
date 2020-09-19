@@ -5,6 +5,7 @@
 }
 
 @* Аккаунт *@
+
 <div>
     <img src="~/images/defaut_profile.jpg" width="100" class="rounded mx-auto d-block border border-secondary" alt="...">
 </div>
@@ -24,35 +25,39 @@
         <a href="/Account/Edit/" class="btn border border-primary text-primary">Редактировать</a>
     </div>
 </div>
-<br>
-<div class="d-flex justify-content-around">
-    <div class="">
-        <a href="/Account/Chat/" class="btn border border-dark text-dark">
-            <span class="material-icons">email</span>
-        </a>
+<div class="sticky-top bg-white">
+    <br>
+
+    <div class="d-flex justify-content-around">
+        <div class="">
+            <a href="/Account/Chat/" class="btn border border-dark text-dark">
+                <span class="material-icons">email</span>
+            </a>
+        </div>
+        <div class="">
+            <a href="/Account/Contact/" class="btn border border-dark text-dark">
+                <span class="material-icons">contacts</span>
+            </a>
+        </div>
+        <div class="">
+            <a href="/Account/Add/" class="btn border border-dark text-dark">
+                <span class="material-icons">add_circle_outline</span>
+            </a>
+        </div>
+        <div class="">
+            <a href="/Account/Calls/" class="btn border border-dark text-dark">
+                <span class="material-icons">call</span>
+            </a>
+        </div>
+        <div class="">
+            <a href="/Account/Photos/" class="btn border border-dark text-dark">
+                <span class="material-icons">photo_camera</span>
+            </a>
+        </div>
     </div>
-    <div class="">
-        <a href="/Account/Contact/" class="btn border border-dark text-dark">
-            <span class="material-icons">contacts</span>
-        </a>
-    </div>
-    <div class="">
-        <a href="/Account/Add/" class="btn border border-dark text-dark">
-            <span class="material-icons">add_circle_outline</span>
-        </a>
-    </div>
-    <div class="">
-        <a href="/Account/Calls/" class="btn border border-dark text-dark">
-            <span class="material-icons">call</span>
-        </a>
-    </div>
-    <div class="">
-        <a href="/Account/Photos/" class="btn border border-dark text-dark">
-            <span class="material-icons">photo_camera</span>
-        </a>
-    </div>
+    <hr>
 </div>
-<hr>
+
 
 
 @* Контент *@
@@ -63,39 +68,47 @@
             <table width="100%">
                 <tr>
                     <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
-                        <label for="person_name">Имя</label>
+                        <label for="PersonName">Имя</label>
                     </td>
                     <td width="50%" class="border border-dark text-center text-dark text-decoration-none">
-                        <input type="text" id="person_name" style="border: none;" class="text-center form-control" value="Айбек">
+                        <input type="text" id="PersonName" style="border: none;" class="text-center form-control" value="Айбек">
                     </td>
                 </tr>
                 <tr>
                     <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
-                        <label for="person_surname">Фамилия</label>
+                        <label for="PersonSurName">Фамилия</label>
                     </td>
                     <td width="50%" class="border border-dark text-center text-dark text-decoration-none">
-                        <input type="text" id="person_surname" style="border: none;" class="text-center form-control" value="Бакаев">
+                        <input type="text" id="PersonSurName" style="border: none;" class="text-center form-control" value="Бакаев">
                     </td>
                 </tr>
                 <tr>
                     <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
-                        <label for="phone">Номер телефона</label>
+                        <label for="PersonBirthdate">Год рождения</label>
                     </td>
                     <td width="50%" class="border border-dark text-center text-dark text-decoration-none">
-                        <input type="text" id="phone" style="border: none;" class="text-center form-control" value="+996 772 18 19 20">
+                        <input type="text" id="PersonBirthdate" style="border: none;" class="text-center form-control" value="05.05.1995">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
+                        <label for="PersonPhone">Номер телефона</label>
+                    </td>
+                    <td width="50%" class="border border-dark text-center text-dark text-decoration-none">
+                        <input type="text" id="PersonPhone" style="border: none;" class="text-center form-control" value="+996 772 18 19 20">
                     </td>
                 </tr>
                 @*<tr>
-                        <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
-                            <label for="photo">Фото</label>
-                        </td>
-                        <td width="50%" class="input-group border border-dark text-center text-dark text-decoration-none">
-                            <input type="file" accept="image/*" style="border: none;" class="text-center form-control">
-                        </td>
-                    </tr>*@
+            <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
+                <label for="photo">Фото</label>
+            </td>
+            <td width="50%" class="input-group border border-dark text-center text-dark text-decoration-none">
+                <input type="file" accept="image/*" style="border: none;" class="text-center form-control">
+            </td>
+        </tr>*@
                 <tr>
                     <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
-                        <label for="country">Страна</label>
+                        <label for="PersonCountry">Страна</label>
                     </td>
                     <td width="50%" class="input-group border border-dark text-center text-dark text-decoration-none">
                         <div class="input-group-prepend bg-white">
@@ -103,54 +116,75 @@
                                 <img style="width: 20px;" src="~/images/flag_KG.png" />
                             </span>
                         </div>
-                        <input type="text" id="country" style="border: none;" class="text-center form-control" value="Кыргызстан">
+                        <input type="text" id="PersonCountry" style="border: none;" class="text-center form-control" value="Кыргызстан">
                     </td>
                 </tr>
                 <tr>
                     <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
-                        <label for="city">Город</label>
+                        <label for="PersonFromCity">Откуда(город, область)</label>
                     </td>
                     <td width="50%" class="input-group border border-dark text-center text-dark text-decoration-none">
                         <div class="input-group-prepend bg-white">
                             <span class="input-group-text bg-white">
-                                <img style="width: 20px;" src="~/images/logo_BISHKEK.png" />
+                                <span class="material-icons text-muted">location_city</span>
+
                             </span>
                         </div>
-                        <input type="text" id="city" style="border: none;" class="text-center form-control" value="Бишкек">
+                        <input type="text" id="PersonFromCity" style="border: none;" class="text-center form-control" value="Талас">
                     </td>
                 </tr>
                 <tr>
                     <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
-                        <label for="e5">Место учебы</label>
+                        <label for="PersonCity">Город проживания</label>
                     </td>
                     <td width="50%" class="input-group border border-dark text-center text-dark text-decoration-none">
                         <div class="input-group-prepend bg-white">
                             <span class="input-group-text bg-white">
-                                <img style="width: 20px;" src="~/images/logo_KGTU.jpg" />
+                                <span class="material-icons">location_city</span>
+
                             </span>
                         </div>
-                        <input type="text" id="e5" style="border: none;" class="text-center form-control" value="КГТУ им И.Раззакова">
+                        <input type="text" id="PersonCity" style="border: none;" class="text-center form-control" value="Бишкек">
                     </td>
                 </tr>
                 <tr>
                     <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
-                        <label for="e6">Место работы</label>
+                        <label for="PersonEducation">Место учебы</label>
                     </td>
-                    <td width="50%" class="border border-dark text-center text-dark text-decoration-none">
-                        <input type="text" id="e6" style="border: none;" class="text-center form-control" value="Кока-Кола Кыргызстан">
+                    <td width="50%" class="input-group border border-dark text-center text-dark text-decoration-none">
+                        <div class="input-group-prepend bg-white">
+                            <span class="input-group-text bg-white">
+                                <span class="material-icons">school</span>
+                            </span>
+                        </div>
+                        <input type="text" id="PersonEducation" style="border: none;" class="text-center form-control" value="КГТУ им И.Раззакова">
                     </td>
                 </tr>
                 <tr>
                     <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
-                        <label for="e7">Хобби</label>
+                        <label for="PersonWork">Место работы</label>
+                    </td>
+                    <td width="50%" class="input-group border border-dark text-center text-dark text-decoration-none">
+                        <div class="input-group-prepend bg-white">
+                            <span class="input-group-text bg-white">
+                                <span class="material-icons">work</span>
+                            </span>
+                        </div>
+                        <input type="text" id="PersonWork" style="border: none;" class="text-center form-control" value="Кока-Кола Кыргызстан">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%" scope="row" class="border border-dark text-center text-dark text-decoration-none">
+                        <label for="PersonHobbi">Хобби</label>
                     </td>
                     <td width="50%" class="border border-dark text-center text-dark text-decoration-none">
-                        <input type="text" id="e7" style="border: none;" class="text-center form-control" value="Футбол">
+                        <input type="text" id="PersonHobbi" style="border: none;" class="text-center form-control" value="Футбол">
                     </td>
                 </tr>
             </table>
 
             @*ФИ
+                Год рождения
                 Страна
                 Регион
                 Место учебы
