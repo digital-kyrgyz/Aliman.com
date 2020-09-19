@@ -9,15 +9,15 @@ using AlimanProject.Models;
 
 namespace AlimanProject.Controllers
 {
-    public class HomeController : Controller
+    public class PayStoreController : Controller
     {
-        public HomeController()
+        public PayStoreController()
         {
         }
 
         public IActionResult Index()
         {
-            return RedirectToAction("Index", "Album");
+            return View();
         }
     }
 }

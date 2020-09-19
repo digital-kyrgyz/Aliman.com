@@ -9,15 +9,25 @@ using AlimanProject.Models;
 
 namespace AlimanProject.Controllers
 {
-    public class HomeController : Controller
+    public class AlbumController : Controller
     {
-        public HomeController()
+        public AlbumController()
         {
         }
 
         public IActionResult Index()
         {
-            return RedirectToAction("Index", "Album");
+            return View();
+        }
+        
+        public IActionResult AlbumMusic()
+        {
+            return View();
+        }
+
+        public IActionResult AlbumMusicNurlan()
+        {
+            return View();
         }
     }
 }
