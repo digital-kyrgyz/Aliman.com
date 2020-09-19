@@ -19,8 +19,8 @@
     <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
             <div class="d-flex justify-content-between">
                 <a href="/Home/Index/" class="btn">
                     <span class="material-icons md-dark">keyboard_backspace</span>
@@ -29,74 +29,26 @@
                     <span class="material-icons md-dark">menu</span>
                 </a>
             </div>
-            </li>
-        </ul>
+        </li>
+    </ul>
 
-        <div class="container">
-            <main role="main" class="pb-3">
+    <div class="container">
+        <main role="main" class="pb-3">
 
 
-                <br>
-                <br>
-                <br>
-                <div>
-                    <img src="~/images/defaut_profile.jpg" width="100" class="rounded mx-auto d-block border border-secondary" alt="...">
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-8 text-center">
-                        <div class="shadow-sm p-2 m-1 bg-white rounded border border-secondary">+996 772 18 19 20</div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-8 text-center">
-                        <div class="shadow-sm p-2 m-1 bg-white rounded font-weight-bold hoverable border border-secondary">Айбек Бакаев</div>
-                    </div>
-                </div>
-                <div class="row justify-content-center mt-1">
-                    <div class="col-8 text-center">
-                        <a href="/Account/AccountEdit/" class="btn border border-dark text-dark">Редактировать</a>
-                    </div>
-                </div>
-                <br>
-                <div class="d-flex justify-content-around">
-                    <div class="">
-                        <a href="/Account/AccountChats/" class="btn border border-primary text-primary">
-                            <span class="material-icons">email</span>
-                        </a>
-                    </div>
-                    <div class="">
-                        <a href="/Account/AccountContact/" class="btn border border-dark text-dark">
-                            <span class="material-icons">contacts</span>
-                        </a>
-                    </div>
-                    <div class="">
-                        <a href="/Home/AccountAdd/" class="btn border border-dark text-dark">
-                            <span class="material-icons">add_circle_outline</span>
-                        </a>
-                    </div>
-                    <div class="">
-                        <a href="/Account/AccountCalls/" class="btn border border-dark text-dark">
-                            <span class="material-icons">call</span>
-                        </a>
-                    </div>
-                    <div class="">
-                        <a href="/Account/AccountPhotos/" class="btn border border-dark text-dark">
-                            <span class="material-icons">photo_camera</span>
-                        </a>
-                    </div>
-                </div>
-                <hr>
-                <div>
-                    @RenderBody()
-                </div>
-            </main>
-
-        </div>
-        <footer class="border-top footer text-muted">
-            <div class="container">
-                &copy; 2020 - Aliman - <a href="Privacy">Конфеденциальность</a>
+            <br>
+            <br>
+            <br>
+            <div>
+                @RenderBody()
             </div>
-        </footer>
+        </main>
+
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - Aliman - <a href="Privacy">Конфеденциальность</a>
+        </div>
+    </footer>
 </body>
 </html>
