@@ -2,82 +2,93 @@
 @{
     ViewData["Title"] = "Index";
 }
-<!-- 21:9 aspect ratio -->
-<div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="~/videos/%d0%9d%d1%83%d1%80%d0%bb%d0%b0%d0%bd%20%d0%9d%d0%b0%d1%81%d0%b8%d0%bf%20-%20%d0%9b%d0%b5%d0%b9%d0%bb%d0%b0%20_%20%d0%9f%d1%80%d0%b5%d0%bc%d1%8c%d0%b5%d1%80%d0%b0%20%d0%ba%d0%bb%d0%b8%d0%bf%d0%b0%202020.mp4" type="video/mp4"></iframe>
-</div>
-<div class="container-fluid">
+
+<div class="sticky-top bg-white">
+    <hr />
     <div class="">
-        <p><h2 class="border bordered rounded-sm" style="font-size:15px;">Нурлан Насип- Лейла</h2></p>
+        <div class="container">
+            <div class="row p-1">
+                <a href="/Video/Index" class="col-3 border border-primary text-center text-primary text-decoration-none">Кино</a>
+                <a href="/VideoSerial/Index" class="col-3 border border-dark text-center text-dark text-decoration-none">Сериал</a>
+                <a href="/VideoTVShow/Index" class="col-3 border border-dark text-center text-dark text-decoration-none">ТВ Шоу</a>
+                <a href="/VideoMultik/Index" class="col-3 border border-dark text-center text-dark text-decoration-none">Мультик</a>
+                @*<a href="#" class="col-3 border border-dark text-center text-dark text-decoration-none">Канал</a>*@
+            </div>
+        </div>
     </div>
-    <div class="d-flex flex-row">
-        <div class="px-3"><span class="material-icons" style="font-size:20px">thumb_up</span></div>
-        <div class="px-3"><span class="material-icons" style="font-size:20px">thumb_down</span></div>
-        <div class="px-3"><span class="material-icons" style="font-size:20px">share</span></div>
-        <div class=""><span class="material-icons" style="font-size:20px">comment</span></div>
-    </div>
-
+    <br />
 </div>
+
+<hr />
+<div class="w-100">
+    <video class="w-100" controls>
+        <source src="~/videos/kurmanjan.mp4" type="video/mp4">
+        Your browser does not support HTML video.
+    </video>
+</div>
+<hr />
+<div>
+    <div class="pl-3 pt-2">
+        <p>Курманжан Датка</p>
+    </div>
+    <div class="d-flex justify-content-between">
+        <div>
+            <button class="btn btn-sm text-muted">
+                <span class="material-icons">thumb_up</span>
+            </button>
+            <button class="btn btn-sm text-muted">
+                <span class="material-icons">thumb_down</span>
+            </button>
+            <button class="btn btn-sm text-muted">
+                <span class="material-icons">share</span>
+            </button>
+            <button class="btn btn-sm text-muted">
+                <span class="material-icons">comment</span>
+            </button>
+        </div>
+        <div>
+            <span class="text-muted">Просмотр <b>24 млн</b></span>
+        </div>
+    </div>
+</div>
+
+<hr />
+<div class="w-100">
+    <video class="w-100" controls>
+        <source src="~/videos/naparnikter.mp4" type="video/mp4">
+        Your browser does not support HTML video.
+    </video>
+</div>
+<hr />
+<div>
+    <div class="pl-3 pt-2">
+        <p>Напарниктер 2</p>
+    </div>
+    <div class="d-flex justify-content-between">
+        <div>
+            <button class="btn btn-sm text-muted">
+                <span class="material-icons">thumb_up</span>
+            </button>
+            <button class="btn btn-sm text-muted">
+                <span class="material-icons">thumb_down</span>
+            </button>
+            <button class="btn btn-sm text-muted">
+                <span class="material-icons">share</span>
+            </button>
+            <button class="btn btn-sm text-muted">
+                <span class="material-icons">comment</span>
+            </button>
+        </div>
+        <div>
+            <span class="text-muted">Просмотр <b>22 млн</b></span>
+        </div>
+    </div>
+</div>
+
+<hr />
 
 <br />
 <br />
-<!-- 16:9 aspect ratio -->
-<div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="~/videos/%d0%94%d0%90%d0%9d%d0%98%d0%af%d0%a0%20%d0%ad%d0%a0%d0%9c%d0%90%d0%a2%d0%9e%d0%92%20-%20%d0%a1%d0%a3%d0%99%d0%94%d0%a3%d0%a0%d0%a3%d0%9f%20%d0%90%d0%9b%d0%90%d0%9c.mp4" type="video/mp4"></iframe>
-</div>
-<div class="container-fluid">
-    <div class="">
-        <p><h2 class="border bordered rounded-sm" style="font-size:15px;">ДАНИЯР ЭРМАТОВ - СУЙДУРУП АЛАМ</h2></p>
-    </div>
-    <div class="d-flex flex-row">
-        <div class="px-3"><span class="material-icons" style="font-size:20px">thumb_up</span></div>
-        <div class="px-3"><span class="material-icons" style="font-size:20px">thumb_down</span></div>
-        <div class="px-3"><span class="material-icons" style="font-size:20px">share</span></div>
-        <div class=""><span class="material-icons" style="font-size:20px">comment</span></div>
-    </div>
-
-</div>
-<br />
-<br />
-
-<!-- 4:3 aspect ratio -->
-<div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="~/videos/%c2%ab%d0%94%d0%b8%d0%b5%d1%82%d0%b0.KZ%c2%bb%20%d1%82%d0%be%d0%b1%d1%8b%20%e2%80%93%20%c2%ab%d0%9b%d3%99%d0%b9%d0%bb%d1%96%d0%bc%c2%bb%20(%d3%98%d0%bd%d1%96_%20%d0%90.%d0%a1%d3%99%d0%bb%d0%b8%d0%b5%d0%b2,%20%d1%81%d3%a9%d0%b7%d1%96_%20%d0%9d.%d0%96%d0%b0%d2%9b%d1%81%d1%8b%d0%bb%d1%8b%d2%9b).mp4" type="video/mp4" />></iframe>
-</div>
-<div class="container-fluid">
-    <div class="">
-        <p><h2 class="border bordered rounded-sm" style="font-size:15px;">Диета KZ тобы - Ләйлә</h2></p>
-    </div>
-    <div class="d-flex flex-row">
-        <div class="px-3"><span class="material-icons" style="font-size:20px">thumb_up</span></div>
-        <div class="px-3"><span class="material-icons" style="font-size:20px">thumb_down</span></div>
-        <div class="px-3"><span class="material-icons" style="font-size:20px">share</span></div>
-        <div class=""><span class="material-icons" style="font-size:20px">comment</span></div>
-    </div>
-
-</div>
-<br />
-<br />
-
-<!-- 1:1 aspect ratio -->
-<div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="~/videos/%d0%ad%d0%bb%d0%b4%d0%be%d1%81%20%d0%90%d0%bb%d0%bc%d0%b0%d0%b7%20-%20%d0%9a%d1%83%d1%82%d0%ba%d0%be%d0%bd%20%d0%ba%d1%83%d0%bd%20%d0%ba%d0%b5%d0%bb%d0%b4%d0%b8%20_%20%d0%96%d0%b0%d0%bd%d1%8b%20%d0%ba%d0%bb%d0%b8%d0%bf%202019.mp4" type="video/mp4" /></iframe>
-</div>
-<div class="container-fluid">
-    <div class="">
-        <p><h2 class="border bordered rounded-sm" style="font-size:15px;">Элдос Алмаз - Куткон кун келди</h2></p>
-    </div>
-    <div class="d-flex flex-row">
-        <div class="px-3"><span class="material-icons" style="font-size:20px">thumb_up</span></div>
-        <div class="px-3"><span class="material-icons" style="font-size:20px">thumb_down</span></div>
-        <div class="px-3"><span class="material-icons" style="font-size:20px">share</span></div>
-        <div class=""><span class="material-icons" style="font-size:20px">comment</span></div>
-    </div>
-</div>
-
-
-
-
 <br />
 <div class="" style="background-color: white;">
     <div class="container">
