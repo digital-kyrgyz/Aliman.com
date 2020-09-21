@@ -87,3 +87,10 @@ body {
     display: inline-flex;
     vertical-align: top;
 }
+
+
+.fb-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+}
