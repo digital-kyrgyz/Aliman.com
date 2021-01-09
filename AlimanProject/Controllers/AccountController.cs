@@ -6,23 +6,39 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using AlimanProject.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace AlimanProject.Controllers
 {
     public class AccountController : Controller
     {
-        public AccountController()
+        SignInManager<ApplicationUser> SignInManager;
+        UserManager<ApplicationUser> UserManager;
+
+        public AccountController(
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager)
         {
+            SignInManager = signInManager;
+            UserManager = userManager;
         }
 
         public IActionResult Index()
         {
-            return RedirectToAction("Chat");
+            
+            if (SignInManager.IsSignedIn(User))
+            {
+                return RedirectToAction("Chat");
+            }
+
+            return RedirectToAction("Signin", "Account", new { area = "Identity" });
         }
 
         // 
         public IActionResult Chat()
         {
+            ViewBag.PhoneNumber = UserManager.GetUserName(User);
+
             return View();
         }
         public IActionResult Contact()
